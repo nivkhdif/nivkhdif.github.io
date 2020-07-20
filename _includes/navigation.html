@@ -1,9 +1,11 @@
-<nav role="navigation">
-  <ul>
-    <li><a href="/" {% if page.url == "/" %}class="active"{% endif %}>Home</a></li>
-    <li><a href="/tags" {% if page.url == "/tags" %}class="active"{% endif %}>Tags</a></li>
-    <li><a href="/about" {% if page.url == "/about" %}class="active"{% endif %}>About</a></li>
-    <li><a href="/projects" {% if page.url == "/projects" %}class="active"{% endif %}>Projects</a></li>
-    <li><a href="/atom.xml">Feed</a></li>
-  </ul>
+<nav class="nav">
+  <div class="nav-container">
+    <a href="{{ site.baseurl }}/">
+      <h2 class="nav-title">{{ site.title }}</h2>
+    </a>
+    <ul>
+      <li><a href="{{ '/about' | prepend: site.baseurl }}">About</a></li>
+      <li><a href="{{ site.baseurl }}/">Posts</a></li>
+    </ul>
+  </div>
 </nav>
