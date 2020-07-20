@@ -1,3 +1,8 @@
+---
+layout: page
+title: About
+---
+
 ## Gray - Single column blog and portfolio Jekyll theme 
 
 Minimal one-column portfolio/blog theme built for Jekyll. Theme weighs under 3kb. Perfect for your personal website, blog and portfolio.
@@ -16,7 +21,3 @@ Minimal one-column portfolio/blog theme built for Jekyll. Theme weighs under 3kb
 - atom feed
 - json feed
 - http security headers
-
-![Screenshot](screenshot.png)
-
-# Demo [here](https://gray-jekyll.netlify.com/)

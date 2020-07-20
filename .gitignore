@@ -1,6 +1,10 @@
-*.gem
-.bundle
+tmp
+*.rdb
+.env
 .sass-cache
-_site
 Gemfile.lock
+coverage
+_drafts
+_site
 .DS_Store
+.git

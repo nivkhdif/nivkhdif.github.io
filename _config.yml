@@ -1,43 +1,95 @@
-title: Texture Theme
-author: GitHub User
-email: your-email@domain.com
-description: > # this means to ignore newlines until "show_exerpts:"
-  Write an awesome description for your new site here. You can edit this
-  line in _config.yml. It will appear in your document head meta (for
-  Google search results) and in your feed.xml site description.
-show_excerpts: true # set to true to show excerpts on the homepage
-baseurl: /texture
+site: Gray - Single column blog and portfolio Jekyll theme
+url: # url
+author: # your name
+author:
+  name: # your name
+  email: # your email 
+  url: # url
+  avatar: 
+title: Gray - Single column blog and portfolio Jekyll theme
+description: Gray - Single column blog and portfolio Jekyll theme
+logo: 
+image: 
+twitter: # twitter 
+twitter:
+  username: # twitter
+  creator: # twitter
+  card: summary
+social:
+  name: Ronalds Vilcins
+  links:
+    - https://twitter.com/example
+    - https://www.dribbble.com/example
+    - https://github.com/example
+    - https://codepen.io/example
+  
+repository: ronv/website
 
-# Minima date format
-# refer to http://shopify.github.io/liquid/filters/date/ if you want to customize this
+permalink: pretty
+
+disqus:
+  name: "your username" # required
+  noscript: "Please enable JavaScript to view the comments powered by Disqus." # optional
+
+paginate:            1000
+paginate_path:       "/page:num/"
+baseurl:             ""
+  
+compress_html:
+  clippings: all
+  comments: ["<!-- ", " -->"]
+
 sass:
-  sass_dir: _sass
-
-permalink: /posts/:title/
-texture:
-  title: Adam Denisov
-  tagline: Developer. Designer
-  date_format: "%b %-d, %Y"
-  style: black
-  showNav: false
-  showPicker: true
-
-  # generate social links in footer
-  social_links:
-    twitter: thelehhman
-    github:  thelehhman
-    linkedIn: in/thelehhman
-    rss: rss
- 
-
-# If you want to link only specific pages in your header, uncomment
-# this and add the path to the pages in order as they should show up
-#header_pages:
-# - about.md
-
-# Build settings
-# theme: texture
+  sass_dir:          _sass
+  style:            :compressed
 
 plugins:
+  - jekyll-paginate
+  - jekyll-gist
   - jekyll-seo-tag
-#  - jekyll-feed
+  - jekyll-sitemap
+  - disqus-for-jekyll
+
+collections:
+  pages:
+    output: true
+    permalink: /:name
+  posts:
+    output: true
+    permalink: /:year/:month/:day/:slug
+  projects:
+    output: true
+    permalink: /projects/:slug
+  art:
+    output: true
+    permalink: /art/:slug
+  
+defaults:
+  -
+    scope:
+      path: ""
+    values:
+      layout: "default"
+  -
+    scope:
+      path: ""
+      type: "pages"
+    values:
+      layout: "page"
+  -
+    scope:
+      path: ""
+      type: "posts"
+    values:
+      layout: "post"
+  -
+    scope:
+      path: ""
+      type: "projects"
+    values:
+      layout: "project"     
+      
+  - scope:
+      path: "assets/images"
+    values:
+      image: true
